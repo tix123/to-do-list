@@ -2,12 +2,15 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 
 const FloatingButton = (props) => {
+    
+    const handlePress = () => {
+        console.log("pressed")
+    }
+
     return (
         <View style={props.style}>
-            <Pressable style={styles.button}>
-
+            <Pressable onPress={handlePress} style={styles.button}>
                 <Text style={styles.text}>+</Text>
-
             </Pressable>
         </View>
     )
@@ -27,7 +30,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        fontSize: 35,
+        fontSize: 50,
+        lineHeight: 62,
     },
 });
 
